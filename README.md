@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is only for an example.
 
-Things you may want to cover:
+Pre Requisites:
+- Ruby 2.5.1
+- MySQL 5.1
+- Node 6.11.0
+- npm 3.10.10
 
-* Ruby version
+## API
 
-* System dependencies
+To run the API app first install:
 
-* Configuration
+`gem install bundler`
 
-* Database creation
+After intall all dependencies:
 
-* Database initialization
+`bundle install`
 
-* How to run the test suite
+Edit `config/database.yml` with your credentials
 
-* Services (job queues, cache servers, search engines, etc.)
+Run:
 
-* Deployment instructions
+```
+$ rake db:create
+$ rake db:schema:load
+$ rake db:seed
+```
 
-* ...
+Server run `$ rails s`
+
+Tests: To run testst: `$ rspec`
+
+To run the application in production you shoul need to set some environments variables:
+```
+AUTHORS_DATABASE=
+AUTHORS_DATABASE_USERNAME=
+AUTHORS_DATABASE_PASSWORD=
+```
+
+## Front-End
+
+Fist run `npm install`
+
+To run the server `npm start`
+
+... To Do.
